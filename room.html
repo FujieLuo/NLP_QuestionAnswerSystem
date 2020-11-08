@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="rolling/css/rolling.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="rolling/js/rolling.js"></script>
+	<script type="text/javascript" src="javascripts/Public.js"></script>
+	<script type="text/javascript" src="/eel.js"></script>
+
+	
+</head>
+<body class="room">
+	<div class="scrollbar-macosx">
+		<div class="header">
+			<div class="toptext">
+				<a href="login.html">
+					<span class="glyphicon glyphicon-arrow-left"></span> 返回登陆界面
+				</a>
+			</div>
+			<ul class="topnavlist">
+				<li class="userlist">
+					<a><span class="glyphicon glyphicon-th-list"></span>问题列表</a>
+					<div class="popover fade bottom in">
+						<div class="arrow"></div>
+						<h3 class="popover-title">常见问题</h3>
+						<div class="popover-content scrollbar-macosx">
+							<ul>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+								<li>
+									<img src="images/user/12.png" alt="portrait_1">
+									<b>美国队长</b>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="clapboard hidden"></div>
+		</div>
+		<div class="main container">
+			<div class="col-md-12">
+				<ul class="chat_info">
+					<li class="left">
+						<img src="images/user/13.jpg" alt="">
+						<b>交小童</b>
+						<i id="showtime"></i>
+						<script>
+        				function showTime(){
+                     	var t=new Date();
+                     	var year=t.getFullYear();
+                     	var month=t.getMonth()+1;
+                     	var day=t.getDate();
+                     	var hour=t.getHours();
+                     	var minute=t.getMinutes();
+                     	var showtime=year + "-" + month + "-" + day+" "+hour+":"+minute;
+                     	return showtime;
+                    	}
+                    	document.getElementById("showtime").innerHTML = showTime();
+                    	</script>
+						<div>欢迎来到西安交通大学考研问答系统</div>
+					</li>
+					<li class="systeminfo">
+						<span id="userName"></span>
+						<script>
+        				function userName(){
+                     	var loc = location.href;
+	        			console.log("room.html"+loc);
+	        			var n1 = loc.length;//地址的总长
+	        			var n2 = loc.indexOf("=");//取得=号的位置
+	        			var n3 = loc.indexOf("&");
+	        			var userName = decodeURI(loc.substr(n2+1, n3-n2-1));//截取从?号后面的内容,也就是参数列表，因为传过来的路径是加了码的，所以要解码
+                     	return "【"+userName+"】进入了《西安交通大学考研信息问答系统》，祝您学业顺利！！！";
+                    	}
+                    	document.getElementById("userName").innerHTML = userName();
+                    	</script>
+					</li>
+					<li class="left">
+						<img src="images/user/13.jpg" alt="">
+						<b>交小童</b>
+						<i id="showtime1"></i>
+						<script>
+        				function showTime(){
+                     	var t=new Date();
+                     	var year=t.getFullYear();
+                     	var month=t.getMonth()+1;
+                     	var day=t.getDate();
+                     	var hour=t.getHours();
+                     	var minute=t.getMinutes();
+                     	var showtime=year + "-" + month + "-" + day+" "+hour+":"+minute;
+                     	return showtime;
+                    	}
+                    	document.getElementById("showtime1").innerHTML = showTime();
+                    	</script>
+						<div>我是交小童</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="input">
+			<div class="center">
+				<div class="tools"></div>
+				<div class="text" >
+					<div class="col-xs-10 col-sm-11">
+						<input type="text" class="form-control" placeholder="输入提问信息...">
+					</div>
+					<div class="col-xs-2 col-sm-1">
+						<a id="subxx" role="button"><span class="glyphicon glyphicon-share-alt"></span></a>
+					</div>
+				</div>
+				<div class="tools"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
